@@ -2,9 +2,9 @@
 
 ## This is a Larvel 9 project with Bootstrap and AdminLTE 3 as backend theme.
 
-## Follow the instruction below to setup your copy of this starter project
+### Follow the instruction below to setup your copy of this starter project
 
-Clone the repo => git clone https://github.com/nawazsarwar/Laravel-9-Bootstrap-AdminLTE3-starter-project.git
+Clone the repo **git clone https://github.com/nawazsarwar/Laravel-9-Bootstrap-AdminLTE3-starter-project.git**
 
 Edit your .env file with DB credentials and other settings.
 
