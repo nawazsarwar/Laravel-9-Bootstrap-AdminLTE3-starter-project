@@ -78,7 +78,7 @@
 
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
-                <b>Version</b> 1.0.0
+                <b>Version</b> 3.0.0-alpha
             </div>
             <strong> &copy;</strong> {{ trans('global.allRightsReserved') }}
         </footer>
@@ -118,7 +118,9 @@
   let selectNoneButtonTrans = '{{ trans('global.deselect_all') }}'
 
   let languages = {
-    'en': 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json'
+    'en': 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json',
+        'ar': 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/Arabic.json',
+        'hi': 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/Hindi.json'
   };
 
   $.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, { className: 'btn' })

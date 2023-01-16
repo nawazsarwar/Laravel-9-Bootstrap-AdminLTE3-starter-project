@@ -2,12 +2,12 @@
 
 return [
     'userManagement' => [
-        'title'          => 'User management',
-        'title_singular' => 'User management',
+        'title'          => 'إدارة المستخدمين',
+        'title_singular' => 'إدارة المستخدمين',
     ],
     'permission' => [
-        'title'          => 'Permissions',
-        'title_singular' => 'Permission',
+        'title'          => 'الصلاحيات',
+        'title_singular' => 'الصلاحية',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
@@ -22,8 +22,8 @@ return [
         ],
     ],
     'role' => [
-        'title'          => 'Roles',
-        'title_singular' => 'Role',
+        'title'          => 'المجموعات',
+        'title_singular' => 'مجموعة',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => ' ',
@@ -40,8 +40,8 @@ return [
         ],
     ],
     'user' => [
-        'title'          => 'Users',
-        'title_singular' => 'User',
+        'title'          => 'المستخدمين',
+        'title_singular' => 'مستخدم',
         'fields'         => [
             'id'                           => 'ID',
             'id_helper'                    => ' ',

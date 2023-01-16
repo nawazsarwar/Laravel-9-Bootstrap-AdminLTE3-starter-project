@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdatePasswordRequest;
@@ -9,29 +9,20 @@ use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class ChangePasswordController extends Controller
+class ProfileController extends Controller
 {
-    public function edit()
+    public function index()
     {
-        abort_if(Gate::denies('profile_password_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
-        return view('auth.passwords.edit');
+        return view('frontend.profile');
     }
 
-    public function update(UpdatePasswordRequest $request)
-    {
-        auth()->user()->update($request->validated());
-
-        return redirect()->route('profile.password.edit')->with('message', __('global.change_password_success'));
-    }
-
-    public function updateProfile(UpdateProfileRequest $request)
+    public function update(UpdateProfileRequest $request)
     {
         $user = auth()->user();
 
         $user->update($request->validated());
 
-        return redirect()->route('profile.password.edit')->with('message', __('global.update_profile_success'));
+        return redirect()->route('frontend.profile.index')->with('message', __('global.update_profile_success'));
     }
 
     public function destroy()
@@ -45,6 +36,13 @@ class ChangePasswordController extends Controller
         $user->delete();
 
         return redirect()->route('login')->with('message', __('global.delete_account_success'));
+    }
+
+    public function password(UpdatePasswordRequest $request)
+    {
+        auth()->user()->update($request->validated());
+
+        return redirect()->route('frontend.profile.index')->with('message', __('global.change_password_success'));
     }
 
     public function toggleTwoFactor(Request $request)
@@ -61,6 +59,6 @@ class ChangePasswordController extends Controller
 
         $user->save();
 
-        return redirect()->route('profile.password.edit')->with('message', $message);
+        return redirect()->route('frontend.profile.index')->with('message', $message);
     }
 }

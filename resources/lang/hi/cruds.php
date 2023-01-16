@@ -2,12 +2,12 @@
 
 return [
     'userManagement' => [
-        'title'          => 'User management',
-        'title_singular' => 'User management',
+        'title'          => 'उपयोगकर्ता प्रबंधन',
+        'title_singular' => 'उपयोगकर्ता प्रबंधन',
     ],
     'permission' => [
-        'title'          => 'Permissions',
-        'title_singular' => 'Permission',
+        'title'          => 'अनुमतियां',
+        'title_singular' => 'अनुमति',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
@@ -22,8 +22,8 @@ return [
         ],
     ],
     'role' => [
-        'title'          => 'Roles',
-        'title_singular' => 'Role',
+        'title'          => 'भूमिका',
+        'title_singular' => 'भूमिका',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => ' ',
@@ -40,8 +40,8 @@ return [
         ],
     ],
     'user' => [
-        'title'          => 'Users',
-        'title_singular' => 'User',
+        'title'          => 'उपयोगकर्ताओं',
+        'title_singular' => 'उपभोक्ता',
         'fields'         => [
             'id'                           => 'ID',
             'id_helper'                    => ' ',

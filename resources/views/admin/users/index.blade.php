@@ -35,6 +35,9 @@
                             {{ trans('cruds.user.fields.email_verified_at') }}
                         </th>
                         <th>
+                            {{ trans('cruds.user.fields.two_factor') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.user.fields.roles') }}
                         </th>
                         <th>
@@ -59,6 +62,10 @@
                             </td>
                             <td>
                                 {{ $user->email_verified_at ?? '' }}
+                            </td>
+                            <td>
+                                <span style="display:none">{{ $user->two_factor ?? '' }}</span>
+                                <input type="checkbox" disabled="disabled" {{ $user->two_factor ? 'checked' : '' }}>
                             </td>
                             <td>
                                 @foreach($user->roles as $key => $item)
